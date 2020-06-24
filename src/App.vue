@@ -1,16 +1,17 @@
 <template>
   <div id="app">
     <div class="content">
-      <p class="hint"><span>Hint: </span>The correct answer is the one your heart says not your rational mind</p>
-      <div class="question">
+      <h1 class="thankyou" v-if="isCompleted">Thank you! riddle is completed</h1>
+      <p v-if="!isCompleted" class="hint"><span>Hint: </span>The correct answer is the one your heart says not your rational mind</p>
+      <div v-if="!isCompleted" class="question">
         <div class="question__container">
           <p class="question__text" v-if="currentQuestion">{{currentQuestion.text}}</p>
         </div>
       </div>
-      <ul class="options">
+      <ul v-if="!isCompleted" class="options">
         <li v-for="op in currentQuestion.options" :key="op.id" @click="select(op)" class="options__items" :class="{'active': isActive(op.id)}">{{op.text}}</li>
       </ul>
-      <div class="question__actions">
+      <div v-if="!isCompleted" class="question__actions">
         <button class="question__btn" @click="next(currentQuestion.id)">Next</button>
       </div>
     </div>
@@ -148,7 +149,8 @@ export default {
         }
       ],
       currentQuestion: null,
-      selectedOption: {}
+      selectedOption: {},
+      isCompleted: false
     }
   },
   created() {
@@ -171,7 +173,7 @@ export default {
           if(value) {
             this.$swal('May he hug you?')
           }else {
-            this.$swal('The riddle is completed!')
+            this.isCompleted = true
           }
         })
       }else {
@@ -316,6 +318,11 @@ export default {
 
 .question__text {
   font-size: 1.2em;
+}
+
+.thankyou {
+  text-align: center;
+  margin-top: 50%;
 }
 
 
