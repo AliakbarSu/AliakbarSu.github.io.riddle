@@ -9,7 +9,7 @@
       </div>
 
       <div class="promise" v-if="isCompleted && won"> 
-        <h1 class="promise__heading"><span class="promise__icon">❤️</span>His promise to you, dear sweetheart X ...</h1>
+        <h1 class="promise__heading"><span class="promise__icon">❤️</span>His promise to you, dear sweetheart Faith ...</h1>
         <p class="promise__text"><span class="promise__icon">❤️</span>He’ll always love you and keep you happy.</p>
         <p class="promise__text"><span class="promise__icon">❤️</span>His life begins that moment when your lips touches his. Now he promises to you, 'my dear sweetheart, that no matter where life takes us, I’ll be by your side, loving you.'</p>
         <p class="promise__text"><span class="promise__icon">❤️</span>He will always be yours, even when you don’t want him.</p>
@@ -152,7 +152,7 @@ export default {
         },
         {
           id: "QuestionFive",
-          text: "What would you say if someone said 'I love you'?",
+          text: "What would you say if someone said that I loved you?",
           isRomance: true,
           isLarge: true,
           options: [
@@ -175,7 +175,7 @@ export default {
         },
         {
           id: "QuestionSix",
-          text: "What if that person was X saying that?",
+          text: "What if that person was Ali saying that?",
           isRomance: true,
           isLarge: true,
           options: [
