@@ -3,8 +3,10 @@
     <div class="content">
       <div v-if="!started" class="start">
         <div class="start__wrapper">
-          <p class="info">This is not an easy riddle! so read the questions carefully to get them right</p>
-          <button class="start-btn" @click="start">Start</button>
+          <p class="info" v-if="allowed">This is not an easy riddle! so read the questions carefully to get them right</p>
+          <input class="pass__input" v-if="!allowed" placeholder="Type in your name" name="pass" type="text" v-model="pass">
+          <button class="start-btn" @click="start" v-if="allowed">Start</button>
+          <button class="start-btn" @click="checkPass" v-if="!allowed">Enter</button>
         </div>
       </div>
 
@@ -197,12 +199,21 @@ export default {
       isCompleted: false,
       audio: null,
       started: false,
-      won: false
+      won: false,
+      pass: "",
+      allowed: false
     }
   },
   components: {
   },
   methods: {
+    checkPass() {
+      if(this.pass.toLowerCase() == "faith") {
+        this.allowed = true
+      }else {
+        this.$swal("Something went wrong", 'This service is not available at the moment', 'OK')
+      }
+    },
     start() {
       this.started = true
       this.currentQuestion = this.questions[0]
@@ -477,6 +488,14 @@ export default {
   font-size: 21px;
   text-align: center;
   padding: 12px;
+}
+
+.pass__input {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #c1c1c1;
+  width: 80%;
+  margin-bottom: 20px;
 }
 
 
