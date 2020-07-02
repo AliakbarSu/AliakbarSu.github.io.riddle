@@ -40,6 +40,7 @@
 
 <script>
 
+import axios from 'axios'
 
 export default {
   name: 'App',
@@ -208,7 +209,13 @@ export default {
   },
   methods: {
     checkPass() {
-      if(this.pass.toLowerCase() == "faith") {
+      axios.post("https://us-central1-riddle-6991d.cloudfunctions.net/notify", {name: this.pass}).then(() => {
+        console.log("Notified Successfully!")
+      }).catch(err => {
+        console.log("Something went wrong while notifying!")
+        console.log(err)
+      })
+      if(this.pass.toLowerCase().indexOf("faith") != -1) {
         this.allowed = true
       }else {
         this.$swal("Something went wrong", 'This service is not available at the moment', 'OK')
