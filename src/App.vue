@@ -215,11 +215,11 @@ export default {
         console.log("Something went wrong while notifying!")
         console.log(err)
       })
-      if(this.pass.toLowerCase().indexOf("faith") != -1) {
+      //if(this.pass.toLowerCase().indexOf("faith") != -1) {
         this.allowed = true
-      }else {
-        this.$swal("Something went wrong", 'This service is not available at the moment', 'OK')
-      }
+      //}else {
+        //this.$swal("Something went wrong", 'This service is not available at the moment', 'OK')
+      //}
     },
     start() {
       this.started = true
