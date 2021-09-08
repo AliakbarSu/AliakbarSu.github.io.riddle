@@ -1,5 +1,5 @@
 # Riddle
-I had a crush on a girl so I decided to ask her out by leading her into a riddle and put the question at the end of the riddle. Little she knew that there is was no right or wrong answer, the important question was the last one 😉
+It is a little quize app that displays multiple choice questions and you have to get the questions right in order to win 😉
 
 ![riddle screenshot](/riddle-app-screenshot.jpg)
 
