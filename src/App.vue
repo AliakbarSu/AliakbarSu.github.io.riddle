@@ -22,10 +22,10 @@
         </div>
       </div>
 
-      <!-- <div class="promise" v-if="isCompleted && won">
+      <div class="promise" v-if="isCompleted && won">
         <h1 class="promise__heading">
           <span class="promise__icon">❤️</span>His promise to you, dear
-          sweetheart Faith ...
+          sweetheart ...
         </h1>
         <p class="promise__text">
           <span class="promise__icon">❤️</span>He’ll always love you and keep
@@ -59,7 +59,8 @@
           the moon, but He promises to love you forever and ever.
         </p>
         <p class="promise__footer">from your true lover Ali</p>
-      </div> -->
+      </div>
+      -->
       <h1 class="thankyou" v-if="isCompleted">
         Thank you! the riddle is completed
       </h1>
@@ -282,11 +283,11 @@ export default {
           console.log('Something went wrong while notifying!')
           console.log(err)
         })
-      // if(this.pass.toLowerCase().indexOf("faith") != -1) {
+      //if(this.pass.toLowerCase().indexOf("faith") != -1) {
       this.allowed = true
-      // }else {
-      //   this.$swal("Something went wrong", 'This service is not available at the moment', 'OK')
-      // }
+      //}else {
+      //this.$swal("Something went wrong", 'This service is not available at the moment', 'OK')
+      //}
     },
     start() {
       this.started = true

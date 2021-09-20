@@ -1,12 +1,15 @@
-<<<<<<< HEAD
-# riddle
+# Riddle
+It is a little quize app that displays multiple choice questions and you have to get the questions right in order to win 😉
 
-## Project setup
+![riddle screenshot](/riddle-app-screenshot.jpg)
+
+## [Live Demo](https://aliakbarsu.github.io/AliakbarSu.github.io.riddle/)
+
+## Running it on your machine
+after cloning this repositry from your terminal run
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
@@ -21,8 +24,4 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
-# riddle
->>>>>>> 5f5aa0dd2517a33d12f673f9ab084f7151236b03
+in case you're wondering what was her answer to the last question? Its irrelevant 😠
